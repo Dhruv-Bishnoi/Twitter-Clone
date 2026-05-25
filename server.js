@@ -10,8 +10,8 @@ import { type } from "os"
 import { ref } from "process"
 
 
-mongoose.connect("mongodb://localhost:27017/twitter")
 
+mongoose.connect(process.env.MONGO_URI)
 
 .then(()=>{
 
