@@ -6,6 +6,9 @@
   "author": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "build": "npx @tailwindcss/cli -i ./src/input.css -o ./public/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,6 +17,7 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.3.0",
     "express": "^5.2.1",
+    "mongodb": "^7.2.0",
     "mongoose": "^9.6.2",
     "multer": "^2.1.1",
     "tailwindcss": "^4.3.0",
