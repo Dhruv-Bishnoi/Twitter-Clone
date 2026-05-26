@@ -12,10 +12,16 @@ const textarea = document.getElementById("comment")
 const con = document.querySelector(".postsArea")
 
 let currentUser = JSON.parse(
-    
     localStorage.getItem("user")
-    
 )
+
+if (!currentUser) {
+
+    window.location.href = "/login"
+
+}
+
+console.log(currentUser._id)
 
 fetch("https://twitter-backend-eeb7.onrender.com/finduser",{
 
