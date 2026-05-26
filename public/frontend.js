@@ -17,7 +17,6 @@ let currentUser = JSON.parse(
     
 )
 
-console.log(currentUser._id)
 fetch("https://twitter-backend-eeb7.onrender.com/finduser",{
 
     method:"POST",
