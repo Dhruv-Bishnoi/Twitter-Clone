@@ -18,7 +18,7 @@ const textarea = document.getElementById("comment")
 const postbtn = document.getElementById("postbtn")
 
 
-postsbtn.addEventListener("click",()=>{
+postbtn.addEventListener("click",()=>{
     console.log("huhaha")
     window.location.href = "/login.html"
 
