@@ -9,19 +9,38 @@ const submitBtn = document.getElementById("submitBtn")
 
 const textarea = document.getElementById("comment")
 
+
+
+// fixed inset-0 z-50 bg-black/50 backdrop-blur-[2px] 
+
+
+
+const postbtn = document.getElementById("postbtn")
+
+
+postsbtn.addEventListener("click",()=>{
+    console.log("huhaha")
+    window.location.href = "/login.html"
+
+    
+})
+
+
+
 const con = document.querySelector(".postsArea")
 
 let currentUser = JSON.parse(
     localStorage.getItem("user")
 )
 
+
 if (!currentUser) {
 
     window.location.href = "/login.html"
 
+
 }
 
-console.log(currentUser._id)
 
 fetch("https://twitter-backend-eeb7.onrender.com/finduser",{
 
