@@ -52,7 +52,7 @@ fetch("https://twitter-backend-eeb7.onrender.com/finduser",{
 
 const ppf = document.querySelectorAll("#PPFs");
 for (let i = 0; i < ppf.length; i++) {
-ppf[i].src = `https://twitter-backend-eeb7.onrender.com${currentUser.PPF}`}
+ppf[i].src = currentUser.PPF}
 
 
 textarea.addEventListener("input", () => {
