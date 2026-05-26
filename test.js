@@ -128,6 +128,9 @@ postBtn.addEventListener("click", () => {
     // RESET
     postText.value = ""
 
+
+    
+
     previewImage.src = ""
 
     previewImage.classList.add("hidden")

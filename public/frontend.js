@@ -648,7 +648,7 @@ profilebtn.addEventListener("click", async()=>{
 
         const backtopp = document.getElementById("profileback")
 backtopp.addEventListener("click",()=>{
-    window.location.href ="/"
+    window.location.href ="/index.html"
 })
 
     
