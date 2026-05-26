@@ -45,7 +45,7 @@ submitBtn.addEventListener("click",(e)=>{
         if(data.success){
             
            localStorage.setItem("user",JSON.stringify(data.user))
-            window.location.href = "/"
+            window.location.href = "/index.html"
 
 
             

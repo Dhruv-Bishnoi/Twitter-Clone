@@ -7,10 +7,20 @@ import { count } from "console"
 import { get } from "http"
 import strict from "assert/strict"
 import { type } from "os"
+import cors from "cors"
+const app = express()
+
+app.use(express.static("public"))
+
+app.use(express.json())
+
+app.use(cors())
 
 
 
 mongoose.connect(process.env.MONGO_URI)
+
+
 
 .then(()=>{
 
@@ -100,11 +110,6 @@ const userdata = new mongoose.Schema({
 
 const Post = mongoose.model("Post", postSchema)
 const user = mongoose.model("user", userdata)
-const app = express()
-
-app.use(express.static("public"))
-
-app.use(express.json())
 
 
 
