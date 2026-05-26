@@ -20,7 +20,80 @@ const postbtn = document.getElementById("postbtn")
 
 postbtn.addEventListener("click",()=>{
     console.log("huhaha")
-    window.location.href = "/login.html"
+    const form = document.getElementById("postModal")
+    console.log(form)
+  form.classList.add(
+        "fixed",
+        "inset-0",
+        "z-50",
+        "bg-black/50",
+        "backdrop-blur-[1px]",
+        "w-[100%]"
+    );
+
+
+    const inbox = document.getElementById("inbox")
+    console.log(inbox)
+    const crossinbox = document.getElementById("crossinbox")
+inbox.classList.add(
+  "w-1/2",
+  "ml-auto",
+  "mr-auto",
+  "bg-[#16181c]"
+);  
+
+
+
+
+crossinbox.addEventListener("click",()=>{
+ 
+    inbox.classList.remove(
+  "w-1/2",
+  "ml-auto",
+  "mr-auto",
+  "bg-[#16181c]"
+); 
+
+
+
+
+form.classList.remove(
+        "fixed",
+        "inset-0",
+        "z-50",
+        "bg-black/50",
+        "backdrop-blur-[1px]",
+        "w-[100%]"
+    );
+
+
+    crossinbox.innerHTML= ""
+
+    
+
+
+
+})
+
+
+
+
+
+crossinbox.innerHTML = `<svg width="22px" height="22px"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <rect x="0" fill="none" /> <g> <path d="M18.36 19.78L12 13.41l-6.36 6.37-1.42-1.42L10.59 12 4.22 5.64l1.42-1.42L12 10.59l6.36-6.36 1.41 1.41L13.41 12l6.36 6.36z"/> </g> </g>
+
+</svg>`
+    console.log(inbox)
+
+
+
+
+    
 
     
 })
@@ -823,6 +896,10 @@ submitBtn.addEventListener("click", (e) => {
             preview.src = ""
 
             imageInputimg.value = ""
+
+
+            window.location.href ="/index.html"
+
 
 
         })
