@@ -50,7 +50,7 @@ const file = profile.files[0]
 
 
     
-    fetch("/signup",{
+    fetch("https://twitter-backend-eeb7.onrender.com/signup",{
 
         method:"POST",
 

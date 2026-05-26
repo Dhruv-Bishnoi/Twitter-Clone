@@ -11,7 +11,7 @@ submitBtn.addEventListener("click",(e)=>{
     e.preventDefault()
 
 
-    fetch("/login",{
+    fetch("https://twitter-backend-eeb7.onrender.com/login",{
 
         
 

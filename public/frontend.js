@@ -18,7 +18,7 @@ let currentUser = JSON.parse(
 )
 
 console.log(currentUser._id)
-fetch("/finduser",{
+fetch("https://twitter-backend-eeb7.onrender.com/finduser",{
 
     method:"POST",
 
@@ -605,7 +605,7 @@ async function  profileposttemp(postData) {
 
 async function profilePost() {
 
-   const response = await fetch(`/profile/${currentUser._id}`)
+   const response = await fetch(`https://twitter-backend-eeb7.onrender.com/profile/${currentUser._id}`)
    console.log("hello")
    const post = await response.json()
    console.log(post)
@@ -625,7 +625,7 @@ const profilebtn = document.querySelector(".profileBtn")
 
 async function loadPosts() {
     
-    const response = await fetch("/posts")
+    const response = await fetch("https://twitter-backend-eeb7.onrender.com/posts")
     
     const posts = await response.json()
     
@@ -662,7 +662,7 @@ document.addEventListener("click", (e) => {
     if (postEl) {
 
 
-        fetch("/findpost", {
+        fetch("https://twitter-backend-eeb7.onrender.com/findpost", {
 
                 method: "POST",
 
@@ -686,7 +686,7 @@ document.addEventListener("click", (e) => {
                 if (data.likelist.includes(currentUser._id)) {
                     console.log("fhhaa")
 
-                    fetch("/removelike", {
+                    fetch("https://twitter-backend-eeb7.onrender.com/removelike", {
 
                             method: "POST",
 
@@ -721,7 +721,7 @@ document.addEventListener("click", (e) => {
                     else{
                          console.log("huuuhahhaha")
 
-                    fetch("/addlike", {
+                    fetch("https://twitter-backend-eeb7.onrender.com/addlike", {
 
                             method: "POST",
 
@@ -784,7 +784,7 @@ submitBtn.addEventListener("click", (e) => {
     }
 
 
-    fetch("/create-post", {
+    fetch("https://twitter-backend-eeb7.onrender.com/create-post", {
 
             method: "POST",
             body: formData
