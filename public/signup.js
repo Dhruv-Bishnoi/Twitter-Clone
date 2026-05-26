@@ -67,7 +67,7 @@ const file = profile.files[0]
         
         if(data.success){
             alert("Signup Successful ,Please Login")
-            window.location.href = "/login"
+            window.location.href = "/login.html"
 
         }
 

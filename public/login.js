@@ -29,7 +29,7 @@ submitBtn.addEventListener("click",(e)=>{
 
             password:password.value,
 
-            gmail:gmail.value
+            // gmail:gmail.value
 
         })
         
