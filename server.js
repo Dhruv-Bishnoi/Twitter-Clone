@@ -224,11 +224,10 @@ app.post("/login", async (req,res)=>{
 
     console.log("data received")
 
-   const userfind = await user.findOne({
-        username:req.body.username,
-            password:req.body.password,
-            gmail:req.body.gmail
-    })
+  const userfind = await user.findOne({
+    username:req.body.username,
+    password:req.body.password
+})
  
    
 
