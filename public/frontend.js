@@ -542,6 +542,11 @@ async function loadProfile(userid){
 }
 
 
+const homebtn = document.getElementById("homebtn")
+
+homebtn.addEventListener("click",()=>{
+    window.location.href ="/index.html"
+})
 
 
 async function  profileposttemp(postData) {
