@@ -25,7 +25,7 @@ import {
 } from "cloudinary"
 
 
-import dotenv from "dotenv"
+// import dotenv from "dotenv"
 
 
 app.use(express.static("public"))
@@ -33,7 +33,7 @@ app.use(express.static("public"))
 app.use(express.json())
 
 app.use(cors())
-dotenv.config()
+// dotenv.config()
 
 cloudinary.config({
 
@@ -227,7 +227,7 @@ app.get("/profile/:id", async (req, res) => {
 
         console.log(err)
 
-        
+
 
         res.status(500).json({
             message: err.message
