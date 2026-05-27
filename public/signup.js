@@ -62,7 +62,6 @@ const file = profile.files[0]
 
     .then((data)=>{
 
-        console.log(data)
 
         
         if(data.success){

@@ -21,7 +21,6 @@ const postbtn = document.getElementById("postbtn")
 postbtn.addEventListener("click",()=>{
     console.log("huhaha")
     const form = document.getElementById("postModal")
-    console.log(form)
   form.classList.add(
         "fixed",
         "inset-0",
@@ -33,7 +32,6 @@ postbtn.addEventListener("click",()=>{
 
 
     const inbox = document.getElementById("inbox")
-    console.log(inbox)
     const crossinbox = document.getElementById("crossinbox")
 inbox.classList.add(
   "w-1/2",
@@ -88,7 +86,6 @@ crossinbox.innerHTML = `<svg width="22px" height="22px"  viewBox="0 0 24 24" xml
 <g id="SVGRepo_iconCarrier"> <rect x="0" fill="none" /> <g> <path d="M18.36 19.78L12 13.41l-6.36 6.37-1.42-1.42L10.59 12 4.22 5.64l1.42-1.42L12 10.59l6.36-6.36 1.41 1.41L13.41 12l6.36 6.36z"/> </g> </g>
 
 </svg>`
-    console.log(inbox)
 
 
 
@@ -173,7 +170,6 @@ uploadBtn.addEventListener("click", () => {
 imageInputimg.addEventListener("change", () => {
 
     let file = imageInputimg.files[0]
-    console.log(file)
 
     if (file) {
 
@@ -550,18 +546,16 @@ async function loadProfile(userid){
 
 async function  profileposttemp(postData) {
     const profilepostArea = document.querySelector(".postsArea")
+    console.log(postData)
 
     profilepostArea.innerHTML +=`
-    xvcvx
-
-
 
 
     
 <div post-id="" class=" flex gap-3 hover:bg-[#0f0f0f] transition duration-200 px-4 py-3">
 
         <!-- PROFILE -->
-        <img src="${postData.PPF}"
+        <img src="${postData.userid.PPF}"
             class="w-12 h-12 rounded-full object-cover shrink-0 mt-1">
 
 
@@ -698,20 +692,21 @@ async function  profileposttemp(postData) {
 
 
 
-
 async function profilePost() {
 
-   const response = await fetch(`https://twitter-backend-eeb7.onrender.com/profile/${currentUser._id}`)
-   console.log("hello")
-   const post = await response.json()
-   console.log(post)
+   console.log("function started")
 
-     post.forEach(post => {
+   const response = await fetch(
+      `/profile/${currentUser._id}`
+   )
 
-        profileposttemp(post)
+   const posts = await response.json()
 
-    })
+//    console.log(posts)
 
+   posts.forEach((post)=>{
+      profileposttemp(post)
+   })
 
 }
 
@@ -726,7 +721,6 @@ async function loadPosts() {
     const posts = await response.json()
     
     posts.forEach(post => {
-        console.log(post)
       
         createPost(post)
         
@@ -853,11 +847,7 @@ document.addEventListener("click", (e) => {
 
 
 
-    } else {
-        const svg = postEl.querySelector("svg")
-
-
-    }
+    } 
 
 })
 submitBtn.addEventListener("click", (e) => {

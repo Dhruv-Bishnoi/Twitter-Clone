@@ -24,7 +24,8 @@ import {
     v2 as cloudinary
 } from "cloudinary"
 
-// import dotenv from "dotenv"
+
+import dotenv from "dotenv"
 
 
 app.use(express.static("public"))
@@ -32,7 +33,7 @@ app.use(express.static("public"))
 app.use(express.json())
 
 app.use(cors())
-// dotenv.config()
+dotenv.config()
 
 cloudinary.config({
 
@@ -211,14 +212,30 @@ app.post("/signup",
     })
 
 app.get("/profile/:id", async (req, res) => {
-    const finduser = await Post.find({
-        userid: req.params.id
-    })
 
-    res.json(finduser)
-    console.log("done")
+    try {
+
+        const finduser = await Post.find({
+            userid: req.params.id
+        }).populate("userid")
+
+        console.log(finduser)
+
+        res.json(finduser)
+
+    } catch (err) {
+
+        console.log(err)
+
+        
+
+        res.status(500).json({
+            message: err.message
+        })
+
+    }
+
 })
-
 app.get("/login", (req, res) => {
 
     res.sendFile(path.join(__dirname, "public", "login.html"))
@@ -297,8 +314,7 @@ app.post("/create-post",
             userid: req.body.userid,
 
             image: req.file ?
-                req.file.path :
-                ""
+                req.file.path : ""
 
         })
         res.json(newPost)
