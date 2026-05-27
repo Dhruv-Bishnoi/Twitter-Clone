@@ -542,6 +542,37 @@ async function loadProfile(userid){
 }
 
 
+if(window.innerWidth < 800){
+
+    const menuBtn = document.getElementById("menuBtn");
+
+    const mobileSidebar = document.getElementById("mobileSidebar");
+
+    const maincontainer = document.getElementById("maincontainer");
+
+    // OPEN SIDEBAR
+    menuBtn.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        mobileSidebar.classList.remove("-translate-x-full");
+
+    });
+
+    // PREVENT CLOSE WHEN CLICK INSIDE SIDEBAR
+    mobileSidebar.addEventListener("click",(e)=>{
+        e.stopPropagation()
+    })
+
+    // CLOSE WHEN CLICK OUTSIDE
+    maincontainer.addEventListener("click", () => {
+
+        mobileSidebar.classList.add("-translate-x-full");
+
+    });
+
+}
+
 const homebtn = document.getElementById("homebtn")
 
 homebtn.addEventListener("click",()=>{

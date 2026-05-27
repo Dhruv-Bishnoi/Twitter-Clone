@@ -33,22 +33,16 @@
     </style>
 </head>
 
-<body class="bg-black text-white overflow-hidden">
-    <div class="flex h-screen max-w-[1400px] mx-auto">
-        <div class="box1 max-sm:w-[15%]  sticky top-0 h-screen overflow-y-auto pt-3 w-[25%]">
-            <div class="logo fill-white pb-3 mx-4"><svg viewBox="0 0 24 24" aria-hidden="true"
-                    class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
-                    <g>
-                        <path
-                            d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z">
-                        </path>
-                    </g>
-                </svg></div>
-
-            <div class="sidebar flex  ">
-                <ul class=" flex flex-col  mx-1  ">
+<body class="bg-black flex   text-white overflow-hidden">
+<div id="mobileSidebar"
+class="sidebarSM fixed top-0 left-0 h-full w-[70%]
+bg-black z-50
+transform -translate-x-full
+transition-transform duration-300 ease-in-out">        
+    
+    <ul class=" sidetable bg-black  h-full justify-start items-start mt-[20%] flex flex-col gap-3 mx-1  ">
                     <li id="homebtn" 
-                        class="  flex  items-center justify-start  gap-5 w-fit p-1    pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
+                        class=" sidebarItem  flex  items-center justify-start  gap-5 w-fit p-1    pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -58,14 +52,238 @@
                             </g>
                         </svg>
                         
-                         <span class="max-sm:hidden" >
+                         <span class="" >
+                            
+                            Home
+
+                        </span>
+                    </li>
+
+                     <li
+                        class="profileBtn sidebarItem   flex items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z">
+                                </path>
+                            </g>
+                        </svg>
+                        
+                        <span class="" >
+                            
+                            Profile
+
+                        </span>
+                    </li>
+                    <li
+                        class=" sidebarItem flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Explore
+
+                        </span>
+                    </li>
+                    <li
+                        class=" sidebarItem flex   items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl     ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8  r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Notification
+
+                        </span>
+                    </li>
+                    <li
+                        class="flex  sidebarItem  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M20.7 11.7c0-4.48-3.844-8.2-8.699-8.2-4.854 0-8.698 3.72-8.698 8.2v.015l-.001.014c-.02.667.09 1.225.25 1.767.083.28.176.545.276.839.098.285.202.595.288.918.177.663.284 1.401.156 2.271-.086.582-.274 1.191-.582 1.855 1.264.375 2.55.053 4.013-.599l.455-.203.437.242c1.07.594 1.917 1.08 3.406 1.08 4.855 0 8.7-3.72 8.7-8.199zm2 0c0 5.683-4.84 10.2-10.699 10.2-1.784 0-2.96-.555-3.95-1.095-1.876.768-4.02 1.2-6.245-.075l-.885-.505.524-.875c.54-.904.77-1.581.848-2.118.078-.526.02-.98-.11-1.463-.066-.25-.15-.502-.247-.788-.095-.277-.204-.59-.301-.92-.199-.674-.36-1.449-.332-2.39C1.322 6.002 6.154 1.5 12.002 1.5c5.859 0 10.7 4.518 10.7 10.2z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                        
+
+                            Chat
+                        </span>
+                    </li>
+
+
+                    <li
+                        class="flex sidebarItem  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M10 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM6 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4zm13 4v3h2v-3h3V8h-3V5h-2v3h-3v2h3zM3.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C13.318 13.65 11.838 13 10 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C5.627 11.85 7.648 11 10 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H1.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Follow
+
+                        </span>
+                    </li>
+
+
+                    <li
+                        class="  flex sidebarItem   items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        <svg viewBox="0 0 33 32" aria-hidden="true"
+                            class="w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Grok
+
+                        </span>
+                    </li>
+
+
+                    <li
+                        class=" flex sidebarItem   items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Bookmark
+
+                        </span>
+                    </li>
+
+
+                    <li
+                        class="flex sidebarItem   items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path clip-rule="evenodd"
+                                    d="M21.002 5.611c0 2.689-1.085 5.259-3 7.137v4.01c0 1.06-.422 2.078-1.172 2.828l-4.265 4.266-1.937-5.812-4.667-4.667-5.81-1.935 4.265-4.266C5.166 6.422 6.183 6 7.244 6h4.01c1.878-1.915 4.448-3 7.137-3h2.611v2.611zm-8.35 12.179l.787 2.358 1.977-1.976c.375-.375.586-.884.586-1.414v-2.12l-3.35 3.152zM18.391 5c-2.206 0-4.314.91-5.826 2.517l-4.67 4.962 3.628 3.627 4.962-4.67c1.606-1.511 2.517-3.619 2.517-5.825V5h-.611zM7.244 8c-.53 0-1.039.211-1.414.586l-1.977 1.976 2.358.787L9.364 8h-2.12z"
+                                    fill-rule="evenodd"></path>
+                                <path
+                                    d="M5.47 16.241v.003l-.003.013-.014.06-.053.236c-.044.206-.103.504-.163.861-.074.447-.144.978-.188 1.537.56-.045 1.091-.113 1.538-.187.357-.06.654-.12.86-.163.103-.022.183-.04.236-.053l.06-.014.012-.004h.003l.484 1.94H8.24l-.006.003c-.005 0-.011.002-.02.005l-.075.017c-.064.015-.156.036-.272.06-.23.05-.559.116-.951.181-.779.13-1.838.264-2.913.264h-1v-1c0-1.075.133-2.135.263-2.914.065-.392.13-.72.18-.951.024-.116.045-.208.06-.272l.017-.074.005-.021.002-.006v-.003l1.942.482z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Creator Studio
+
+                        </span>
+                    </li>
+
+
+                    <li
+                        class="flex sidebarItem   items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z">
+                                </path>
+                            </g>
+                        </svg>
+                         <span class="" >
+                            
+                            
+                            Premium
+
+                        </span>
+                    </li>
+
+
+                   
+
+
+                    <li
+                        class="flex sidebarItem   items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M3.75 12c0-4.56 3.69-8.25 8.25-8.25s8.25 3.69 8.25 8.25-3.69 8.25-8.25 8.25S3.75 16.56 3.75 12zM12 1.75C6.34 1.75 1.75 6.34 1.75 12S6.34 22.25 12 22.25 22.25 17.66 22.25 12 17.66 1.75 12 1.75zm-4.75 11.5c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25S6 11.31 6 12s.56 1.25 1.25 1.25zm9.5 0c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25zM13.25 12c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="" >
+                            
+                            More 
+                        </span>
+
+
+                    </li>
+                  
+                </ul>
+    
+    </div>
+    <div id="maincontainer" class="maincontainer flex max-sm:flex-col max-sm:gap-0 h-screen w-[100%] mx-auto">
+        <div class="box1 max-sm:h-fit  max-sm:flex max-sm:flex-row-reverse max-sm:w-full max-sm:justify-around   sticky top-0 h-screen overflow-y-auto pt-3 w-[25%]">
+            <div class="  justify-center items-center flex max-sm:mt-5 logo fill-white pb-3 mx-4"><svg viewBox="0 0 24 24" aria-hidden="true"
+                    class= " mb-4  w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                    <g>
+                        <path
+                            d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z">
+                        </path>
+                    </g>
+                </svg></div>
+
+            <div class="sidebar flex ">
+                <ul class=" sidetable flex flex-col gap-3 mx-1  ">
+                    <li id="homebtn" 
+                        class=" sidebarItem max-sm:hidden flex  items-center justify-start  gap-5 w-fit p-1    pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                           class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M10.059 2.593c1.175-.784 2.707-.784 3.882 0l6.5 4.333C21.415 7.575 22 8.668 22 9.838V18.5c0 1.933-1.567 3.5-3.5 3.5h-4.25v-5.25c0-1.243-1.007-2.25-2.25-2.25s-2.25 1.007-2.25 2.25V22H5.5C3.567 22 2 20.433 2 18.5V9.838c0-1.17.585-2.263 1.559-2.912l6.5-4.333z">
+                                </path>
+                            </g>
+                        </svg>
+                        
+                         <span class="" >
                             
                             Home
 
                         </span>
                     </li>
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
+                        class=" sidebarItem flex max-sm:hidden items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -82,7 +300,7 @@
                         </span>
                     </li>
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl     ">
+                        class=" sidebarItem flex max-sm:hidden  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl     ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8  r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -99,7 +317,7 @@
                         </span>
                     </li>
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class="flex  sidebarItem max-sm:hidden items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
 
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
@@ -119,7 +337,7 @@
 
 
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class="flex sidebarItem max-sm:hidden items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -138,7 +356,7 @@
 
 
                     <li
-                        class="  flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class="  flex sidebarItem  max-sm:hidden items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
                         <svg viewBox="0 0 33 32" aria-hidden="true"
                             class="w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -157,7 +375,7 @@
 
 
                     <li
-                        class=" flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class=" flex sidebarItem  max-sm:hidden items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -176,7 +394,7 @@
 
 
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl">
+                        class="flex sidebarItem max-sm:hidden  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -198,7 +416,7 @@
 
 
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class="flex sidebarItem max-sm:hidden  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -217,7 +435,7 @@
 
 
                     <li
-                        class="profileBtn  flex items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class="profileBtn sidebarItem max-sm:hidden  flex items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -236,7 +454,7 @@
 
 
                     <li
-                        class="flex  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
+                        class="flex sidebarItem max-sm:hidden  items-center justify-start gap-5 w-fit p-1  pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl    ">
                         <svg viewBox="0 0 24 24" aria-hidden="true"
                             class=" w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
                             <g>
@@ -256,13 +474,13 @@
                         class="">
                          
                         <span class="max-md:hidden bg-white mt-5 w-full  flex  text-black px-24 py-3 rounded-full text-lg hover:bg-[#7d7d7d] transition">Post</span>
-                        <span class="md:hidden mt-5 "><svg viewBox="0 0 24 24" aria-hidden="true" class=" ml-3 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1472mwg fill-black r-lrsllp" style="color: rgb(15, 20, 25);"><g><path d="M10.938 4.5H9.9c-1.136 0-1.929 0-2.546.05-.605.05-.953.143-1.216.277-.564.288-1.023.747-1.31 1.31-.135.264-.228.612-.277 1.218C4.5 7.97 4.5 8.765 4.5 9.9v4.2c0 1.136 0 1.929.05 2.546.05.605.143.953.277 1.216.288.565.747 1.023 1.31 1.31.264.135.612.228 1.217.277.617.05 1.41.051 2.546.051h4.2c1.136 0 1.929 0 2.545-.05.606-.05.954-.143 1.217-.277.565-.288 1.023-.746 1.31-1.31.135-.264.228-.612.277-1.217.05-.617.051-1.41.051-2.546v-1.037h2V14.1c0 1.103.001 1.992-.058 2.709-.06.728-.185 1.368-.487 1.96-.48.941-1.245 1.707-2.185 2.186-.593.302-1.233.428-1.961.488-.718.058-1.606.057-2.71.057H9.9c-1.103 0-1.991.001-2.709-.058-.728-.06-1.368-.185-1.96-.487-.941-.48-1.707-1.245-2.186-2.185-.302-.593-.428-1.233-.487-1.961-.059-.718-.058-1.606-.058-2.71V9.9c0-1.103-.001-1.991.058-2.709.06-.728.185-1.368.487-1.96.48-.941 1.245-1.707 2.185-2.186.593-.302 1.233-.428 1.961-.487.718-.059 1.606-.058 2.71-.058h1.037v2z"></path><path clip-rule="evenodd" d="M16.293 3.293c1.219-1.219 3.195-1.219 4.414 0 1.219 1.219 1.219 3.195 0 4.414l-5.491 5.491c-.533.533-.89.896-1.31 1.179-.356.24-.742.433-1.148.574-.478.167-.983.234-1.729.341l-2.708.387.387-2.708c.107-.746.174-1.25.34-1.729.142-.405.335-.792.575-1.148.283-.42.646-.777 1.179-1.31l5.491-5.491zm3 1.414c-.438-.438-1.148-.438-1.586 0l-5.491 5.491c-.587.587-.784.79-.934 1.013-.144.214-.26.445-.345.688-.088.254-.131.533-.248 1.354l-.01.067.068-.008c.82-.118 1.1-.161 1.354-.25.243-.084.474-.2.688-.344.223-.15.426-.347 1.013-.934l5.491-5.491c.438-.438.438-1.148 0-1.586z" fill-rule="evenodd"></path></g></svg></span>
+                        <!-- <span class="md:hidden mt-5 "><svg viewBox="0 0 24 24" aria-hidden="true" class=" ml-3 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1472mwg fill-black r-lrsllp" style="color: rgb(15, 20, 25);"><g><path d="M10.938 4.5H9.9c-1.136 0-1.929 0-2.546.05-.605.05-.953.143-1.216.277-.564.288-1.023.747-1.31 1.31-.135.264-.228.612-.277 1.218C4.5 7.97 4.5 8.765 4.5 9.9v4.2c0 1.136 0 1.929.05 2.546.05.605.143.953.277 1.216.288.565.747 1.023 1.31 1.31.264.135.612.228 1.217.277.617.05 1.41.051 2.546.051h4.2c1.136 0 1.929 0 2.545-.05.606-.05.954-.143 1.217-.277.565-.288 1.023-.746 1.31-1.31.135-.264.228-.612.277-1.217.05-.617.051-1.41.051-2.546v-1.037h2V14.1c0 1.103.001 1.992-.058 2.709-.06.728-.185 1.368-.487 1.96-.48.941-1.245 1.707-2.185 2.186-.593.302-1.233.428-1.961.488-.718.058-1.606.057-2.71.057H9.9c-1.103 0-1.991.001-2.709-.058-.728-.06-1.368-.185-1.96-.487-.941-.48-1.707-1.245-2.186-2.185-.302-.593-.428-1.233-.487-1.961-.059-.718-.058-1.606-.058-2.71V9.9c0-1.103-.001-1.991.058-2.709.06-.728.185-1.368.487-1.96.48-.941 1.245-1.707 2.185-2.186.593-.302 1.233-.428 1.961-.487.718-.059 1.606-.058 2.71-.058h1.037v2z"></path><path clip-rule="evenodd" d="M16.293 3.293c1.219-1.219 3.195-1.219 4.414 0 1.219 1.219 1.219 3.195 0 4.414l-5.491 5.491c-.533.533-.89.896-1.31 1.179-.356.24-.742.433-1.148.574-.478.167-.983.234-1.729.341l-2.708.387.387-2.708c.107-.746.174-1.25.34-1.729.142-.405.335-.792.575-1.148.283-.42.646-.777 1.179-1.31l5.491-5.491zm3 1.414c-.438-.438-1.148-.438-1.586 0l-5.491 5.491c-.587.587-.784.79-.934 1.013-.144.214-.26.445-.345.688-.088.254-.131.533-.248 1.354l-.01.067.068-.008c.82-.118 1.1-.161 1.354-.25.243-.084.474-.2.688-.344.223-.15.426-.347 1.013-.934l5.491-5.491c.438-.438.438-1.148 0-1.586z" fill-rule="evenodd"></path></g></svg></span> -->
                     </button>
                 </ul>
             </div>
 
-            <div class="hover:bg-[#212121] rounded-4xl w-fit mt-10 p-3 justify-center items-center flex  gap-5">
-                <div class=""><img id="PPFs" class="w-14 rounded-full object-cover aspect-square" src="" alt=""></div>
+            <div class="hover:bg-[#212121] rounded-4xl w-fit max-sm:mt-0 mt-10 p-3 justify-center items-center flex  gap-5">
+                <div id="menuBtn" class=""><img id="PPFs" class= " w-14 rounded-full object-cover aspect-square" src="" alt=""></div>
                 <div class="max-sm:hidden">
                     <div>DHRUV BISHNOI</div>
                     <div class="max-sm:hidden font-extralight text-[#7d7d7d]">@Dhruv Bishnoi</div>
@@ -281,7 +499,7 @@
 
 
 
-        <div class="box2 max-sm:w-[85%] w-[50%] h-screen overflow-y-auto border-x border-[#2f3336]">
+        <div class="box2 max-sm:w-full w-[50%] h-screen overflow-y-auto border-x border-[#2f3336]">
             <!-- NAV -->
             <div class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl">
 
@@ -321,7 +539,7 @@
 
             </div>
             <div>
-                <form id="postModal" class="postModal flex-column justify-center  pt-10">
+                <form id="postModal" class=" max-sm:hidden postModal flex-column justify-center  pt-10">
                     <input id="imageInput" type="file" accept="image/*" class="hidden">
                     <img id="preview" src=""
                         class="mt-3 w-full max-h-[500px] object-cover border border-[#2f3336] "></img>
@@ -396,7 +614,7 @@
                 </form>
 
 
-                <div class="text-[#1d9bf0]  flex justify-center pb-4">Show 172 Posts</div>
+                <!-- <div class="text-[#1d9bf0]  flex justify-center pb-4">Show 172 Posts</div> -->
 
                 <div class="h-px w-full bg-[#2f3336]"></div>
 
