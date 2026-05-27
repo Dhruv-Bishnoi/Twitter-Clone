@@ -541,7 +541,6 @@ async function loadProfile(userid){
 
 }
 
-
 if(window.innerWidth < 800){
 
     const menuBtn = document.getElementById("menuBtn");
@@ -550,26 +549,99 @@ if(window.innerWidth < 800){
 
     const maincontainer = document.getElementById("maincontainer");
 
+
     // OPEN SIDEBAR
     menuBtn.addEventListener("click", (e) => {
 
         e.stopPropagation();
 
-        mobileSidebar.classList.remove("-translate-x-full");
+mobileSidebar.classList.remove("-translate-x-full");
 
+mobileSidebar.style.transform = "translateX(0)";
     });
 
-    // PREVENT CLOSE WHEN CLICK INSIDE SIDEBAR
+
+    // PREVENT CLOSE INSIDE SIDEBAR
     mobileSidebar.addEventListener("click",(e)=>{
         e.stopPropagation()
     })
 
-    // CLOSE WHEN CLICK OUTSIDE
+
+    // OUTSIDE CLICK CLOSE
     maincontainer.addEventListener("click", () => {
 
         mobileSidebar.classList.add("-translate-x-full");
 
     });
+
+
+    // =========================
+    // SWIPE CLOSE
+    // =========================
+
+  let startX = 0;
+let currentTranslate = 0;
+let isDragging = false;
+
+mobileSidebar.addEventListener("touchstart", (e) => {
+
+    startX = e.touches[0].clientX;
+
+    isDragging = true;
+
+    // REMOVE SMOOTH TRANSITION
+    mobileSidebar.style.transition = "none";
+
+});
+
+
+mobileSidebar.addEventListener("touchmove", (e) => {
+
+    if(!isDragging) return;
+
+    let currentX = e.touches[0].clientX;
+
+    let diff = currentX - startX;
+
+    // ONLY LEFT SWIPE
+    if(diff < 0){
+
+        currentTranslate = diff;
+
+        mobileSidebar.style.transform =
+        `translateX(${diff}px)`;
+
+    }
+
+});
+
+
+mobileSidebar.addEventListener("touchend", () => {
+
+    isDragging = false;
+
+    // RESTORE TRANSITION
+    mobileSidebar.style.transition =
+    "transform 0.3s ease";
+
+    // CLOSE IF DRAGGED ENOUGH
+    if(currentTranslate < -100){
+
+        mobileSidebar.style.transform =
+        "translateX(-100%)";
+
+    }
+
+    // OTHERWISE OPEN AGAIN
+    else{
+
+        mobileSidebar.style.transform =
+        "translateX(0)";
+
+    }
+
+});
+
 
 }
 
