@@ -697,7 +697,7 @@ async function profilePost() {
    console.log("function started")
 
    const response = await fetch(
-      `/profile/${currentUser._id}`
+      `https://twitter-backend-eeb7.onrender.com/profile/${currentUser._id}`
    )
 
    const posts = await response.json()
