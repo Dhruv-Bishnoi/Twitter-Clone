@@ -13,6 +13,84 @@ const textarea = document.getElementById("comment")
 
 // fixed inset-0 z-50 bg-black/50 backdrop-blur-[2px] 
 
+const mobilePostBtn =
+document.getElementById("mobilePostBtn")
+
+const mobilePostPage =
+document.getElementById("mobilePostPage")
+
+const closeMobilePost =
+document.getElementById("closeMobilePost")
+
+
+mobilePostBtn.addEventListener("click",()=>{
+
+    mobilePostPage.classList.remove("hidden")
+
+    mobilePostPage.classList.add("flex")
+
+})
+
+
+closeMobilePost.addEventListener("click",()=>{
+
+    mobilePostPage.classList.add("hidden")
+
+    mobilePostPage.classList.remove("flex")
+
+})
+
+
+const mobileUploadBtn =
+document.getElementById("mobileUploadBtn")
+
+const mobileImageInput =
+document.getElementById("mobileImageInput")
+
+const mobilePreview =
+document.getElementById("mobilePreview")
+
+
+mobileUploadBtn.addEventListener("click",()=>{
+
+    mobileImageInput.click()
+
+})
+
+
+mobileImageInput.addEventListener("change",(e)=>{
+
+    const file = e.target.files[0]
+
+    if(file){
+
+        mobilePreview.src =
+        URL.createObjectURL(file)
+
+        mobilePreview.classList.remove("hidden")
+
+    }
+
+})
+
+
+
+
+const mobileSubmitBtn =
+document.getElementById("mobileSubmitBtn")
+
+mobileSubmitBtn.addEventListener("click",async()=>{
+
+    const caption =
+    document.getElementById("mobilePostInput").value
+
+    console.log(caption)
+
+    // SAME FETCH API HERE
+
+})
+
+
 
 
 const postbtn = document.getElementById("postbtn")
@@ -564,6 +642,8 @@ mobileSidebar.style.transform = "translateX(0)";
     // PREVENT CLOSE INSIDE SIDEBAR
     mobileSidebar.addEventListener("click",(e)=>{
         e.stopPropagation()
+
+        
     })
 
 

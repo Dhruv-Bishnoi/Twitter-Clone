@@ -172,7 +172,7 @@ transition-transform duration-300 ease-in-out">
     </div>
     <div id="maincontainer" class="maincontainer flex max-sm:flex-col max-sm:gap-0 h-screen w-[100%] mx-auto">
         <div
-            class="box1 max-sm:h-fit  max-sm:flex max-sm:flex-row-reverse max-sm:w-full max-sm:justify-around   sticky top-0 h-screen overflow-y-auto pt-3 w-[25%]">
+            class="box1 max-sm:h-[6%]  max-sm:flex max-sm:flex-row-reverse max-sm:w-full max-sm:justify-around   sticky top-0 h-screen overflow-y-auto pt-3 w-[25%]">
             <div class="  justify-center items-center flex max-sm:mt-5 logo fill-white pb-3 mx-4"><svg
                     viewBox="0 0 24 24" aria-hidden="true"
                     class=" mb-4  w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
@@ -400,16 +400,17 @@ transition-transform duration-300 ease-in-out">
             </div>
 
             <div
-                class="hover:bg-[#212121] rounded-4xl w-fit max-sm:mt-0 mt-10 p-3 justify-center items-center flex  gap-5">
-                <div id="menuBtn" class=""><img id="PPFs" class=" w-14 rounded-full object-cover aspect-square" src=""
+                class="hover:bg-[#212121] rounded-4xl w-fit  max-sm:mt-0 mt-10 p-3 justify-center items-center flex  gap-5">
+                <div id="menuBtn" class=""><img id="PPFs" class=" max-sm:w-12 w-14 rounded-full object-cover aspect-square" src=""
                         alt=""></div>
-                <div class="max-sm:hidden">
+                <div class="max-sm:hidden ">
                     <div>DHRUV BISHNOI</div>
                     <div class="max-sm:hidden font-extralight text-[#7d7d7d]">@Dhruv Bishnoi</div>
                 </div>
                 <div class="max-sm:hidden"><svg viewBox="0 0 24 24" aria-hidden="true"
                         class=" fill-white w-5 r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i">
                         <g>
+
                             <path
                                 d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z">
                             </path>
@@ -421,15 +422,15 @@ transition-transform duration-300 ease-in-out">
 
 
 
-        <div class="box2 max-sm:w-full w-[50%] h-screen overflow-y-auto border-x border-[#2f3336]">
+        <div class="box2 max-sm:h-[84%] max-sm:w-full w-[50%] h-screen overflow-y-auto border-x border-[#2f3336]">
             <!-- NAV -->
-            <div class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl">
+            <div class="sticky top-0 z-5  bg-black/80 backdrop-blur-xl">
 
-                <div class="relative flex">
+                <div class="relative  max-sm:h[6%] flex">
 
                     <!-- FOR YOU -->
                     <div
-                        class="relative w-1/2 flex justify-center items-center py-4 hover:bg-[#16181c] transition cursor-pointer">
+                        class="relative w-1/2  flex justify-center items-center py-4 hover:bg-[#16181c] transition cursor-pointer">
 
                         <span class="text-xl font-bold text-white">
                             For You
@@ -679,7 +680,7 @@ transition-transform duration-300 ease-in-out">
         </div>
 
 
-        <div class="flex justify-around  sm:hidden">
+        <div class="max-sm:h-[10%] flex justify-around  sm:hidden">
 
             <div id="homebtn"
                 class=" sidebarItem  flex  items-center justify-start  gap-5 w-fit p-1    pr-3 pl-3 hover:bg-[#212121] hover:rounded-4xl   ">
@@ -746,9 +747,113 @@ transition-transform duration-300 ease-in-out">
                
             </div>
 
+            
+        </div>
+
+        
+
+    </div>
+    <button id="mobilePostBtn"
+class="md:hidden fixed bottom-25 right-5
+bg-[#1d9bf0]
+text-white
+w-14 h-14 rounded-full
+text-3xl z-50 shadow-lg">
++
+</button>
+
+
+<div id="mobilePostPage"
+class="fixed inset-0 bg-black z-[999]
+hidden flex-col">
+
+    <!-- TOP BAR -->
+    <div class="flex justify-between items-center
+    px-4 py-3 border-b border-[#2f3336]">
+
+        <button id="closeMobilePost"
+        class="text-[18px]">
+            Cancel
+        </button>
+
+        <button id="mobileSubmitBtn"
+        class="bg-[#1d9bf0]
+        px-4 py-2 rounded-full
+        font-bold text-sm">
+
+            Post
+
+        </button>
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="flex gap-3  p-4">
+
+        <!-- PROFILE -->
+        <img id="PPFs"
+        class="w-10 h-10 rounded-full object-cover"
+        src="" alt="">
+
+
+        <!-- INPUT -->
+        <textarea
+        id="mobilePostInput"
+
+        placeholder="What’s happening?"
+
+        class="bg-transparent
+        w-full
+        outline-none
+        resize-none
+        text-[20px]
+        min-h-[200px]
+        placeholder:text-[#71767b]
+        border-2
+        border-white">
+        </textarea>
+
+    </div>
+
+
+    <!-- IMAGE PREVIEW -->
+    <div class="px-4">
+
+        <img id="mobilePreview"
+        class="hidden rounded-2xl
+        max-h-[300px]
+        w-full object-cover">
+
+    </div>
+
+
+    <!-- BOTTOM BAR -->
+    <div class="mt-auto
+    border-t border-[#2f3336]
+    p-4 flex justify-between items-center">
+
+        <button id="mobileUploadBtn">
+
+            📷
+
+        </button>
+
+        <div class="text-[#71767b] text-sm">
+
+            Everyone can reply
 
         </div>
+
     </div>
+
+</div>
+
+<input
+id="mobileImageInput"
+type="file"
+accept="image/*"
+class="hidden">
 
     <script src="frontend.js"></script>
 
