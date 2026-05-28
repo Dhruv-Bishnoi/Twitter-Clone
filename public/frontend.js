@@ -79,17 +79,92 @@ mobileImageInput.addEventListener("change",(e)=>{
 const mobileSubmitBtn =
 document.getElementById("mobileSubmitBtn")
 
-mobileSubmitBtn.addEventListener("click",async()=>{
+const mobilePostInput =
+document.getElementById("mobilePostInput")
+
+const mobileImageInput =
+document.getElementById("mobileImageInput")
+
+const mobilePreview =
+document.getElementById("mobilePreview")
+
+const mobilePostPage =
+document.getElementById("mobilePostPage")
+
+
+mobileSubmitBtn.addEventListener("click",(e)=>{
+
+    e.preventDefault()
+
+    const formData = new FormData()
 
     const caption =
-    document.getElementById("mobilePostInput").value
+    mobilePostInput.value.trimStart()
 
-    console.log(caption)
+    const file =
+    mobileImageInput.files[0]
 
-    // SAME FETCH API HERE
+
+    formData.append("image", file)
+
+    formData.append("caption", caption)
+
+    formData.append("userid", currentUser._id)
+
+
+
+    // EMPTY CHECK
+    if(caption === "" && !file){
+
+        return
+
+    }
+
+
+    fetch(
+    "https://twitter-backend-eeb7.onrender.com/create-post",
+
+    {
+
+        method:"POST",
+
+        body:formData
+
+    })
+
+    .then((res)=>res.text())
+
+    .then((data)=>{
+
+        console.log(data)
+
+        // RELOAD POSTS
+        loadPosts()
+
+        // CLEAR INPUTS
+        mobilePostInput.value = ""
+
+        mobilePreview.src = ""
+
+        mobilePreview.classList.add("hidden")
+
+        mobileImageInput.value = ""
+
+
+
+        // CLOSE PAGE
+        mobilePostPage.classList.add("hidden")
+
+        mobilePostPage.classList.remove("flex")
+
+
+
+        // OPTIONAL TOAST
+        showToast("Post Created 🚀")
+
+    })
 
 })
-
 
 
 
