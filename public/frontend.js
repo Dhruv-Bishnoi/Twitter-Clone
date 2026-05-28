@@ -82,14 +82,7 @@ document.getElementById("mobileSubmitBtn")
 const mobilePostInput =
 document.getElementById("mobilePostInput")
 
-const mobileImageInput =
-document.getElementById("mobileImageInput")
 
-const mobilePreview =
-document.getElementById("mobilePreview")
-
-const mobilePostPage =
-document.getElementById("mobilePostPage")
 
 
 mobileSubmitBtn.addEventListener("click",(e)=>{
@@ -165,6 +158,22 @@ mobileSubmitBtn.addEventListener("click",(e)=>{
     })
 
 })
+
+function showToast(message){
+
+    const toast = document.getElementById("toast")
+
+    toast.innerText = message
+
+    toast.classList.remove("hidden")
+
+    setTimeout(()=>{
+
+        toast.classList.add("hidden")
+
+    },2000)
+
+}
 
 
 
