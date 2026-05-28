@@ -411,7 +411,9 @@ function createPost(postData) {
         `
         <img
         src="${postData.image}"
-        class="mt-3 rounded-2xl w-full max-h-[500px] object-cover border border-[#2f3336]"
+        class="mt-3 rounded-2xl
+        max-h-[300px]
+        w-full object-cover"
         >
         `
         :
@@ -1014,6 +1016,8 @@ backtopp.addEventListener("click",()=>{
 
 
 }
+
+
 
 document.addEventListener("click", (e) => {
 
