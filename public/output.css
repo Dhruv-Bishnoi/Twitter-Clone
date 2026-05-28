@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-600: oklch(44.6% 0.03 256.802);
@@ -661,6 +662,9 @@
   }
   .fill-\[\#ffffff\] {
     fill: #ffffff;
+  }
+  .fill-amber-50 {
+    fill: var(--color-amber-50);
   }
   .fill-black {
     fill: var(--color-black);
