@@ -859,11 +859,15 @@ mobileSidebar.addEventListener("touchend", () => {
 
 }
 
-const homebtn = document.getElementById("homebtn")
 
-homebtn.addEventListener("click",()=>{
-    window.location.href ="/index.html"
+const homebtn = document.querySelectorAll(".homebtn")
+
+homebtn.forEach((LOG)=>{
+    LOG.addEventListener("click",()=>{
+        window.location.href="/index.html"
+    })
 })
+
 
 
 async function  profileposttemp(postData) {
