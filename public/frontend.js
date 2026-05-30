@@ -12,7 +12,7 @@ const textarea = document.getElementById("comment")
 
 
 
-const LOGOUT = document.querySelectorAll("LOGOUT")
+const LOGOUT = document.querySelectorAll(".LOGOUT")
 
 LOGOUT.forEach((LOG)=>{
     LOG.addEventListener("click",()=>{
@@ -21,6 +21,20 @@ LOGOUT.forEach((LOG)=>{
 })
 
 
+const underConstructionBtns =
+document.querySelectorAll(".underConstruction");
+
+underConstructionBtns.forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+        showToast(
+            "🚧 This feature is under construction"
+        );
+
+    });
+
+});
 
 
 
@@ -174,20 +188,38 @@ mobileSubmitBtn.addEventListener("click",(e)=>{
     })
 
 })
-
 function showToast(message){
 
-    const toast = document.getElementById("toast")
+    const toast =
+    document.getElementById("toast");
 
-    toast.innerText = message
+    toast.innerText = message;
 
-    toast.classList.remove("hidden")
+    toast.classList.remove(
+        "hidden",
+        "opacity-0",
+        "-translate-y-5"
+    );
+
+    toast.classList.add(
+        "opacity-100",
+        "translate-y-0"
+    );
 
     setTimeout(()=>{
 
-        toast.classList.add("hidden")
+        toast.classList.add(
+            "opacity-0",
+            "-translate-y-5"
+        );
 
-    },2000)
+        setTimeout(()=>{
+
+            toast.classList.add("hidden");
+
+        },300);
+
+    },2000);
 
 }
 
