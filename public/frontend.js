@@ -428,11 +428,11 @@ function createPost(postData) {
             <div class="flex gap-2 items-center m-4">
 
                 <span class="font-bold text-[15px] text-white hover:underline cursor-pointer">
-                    Beniwal
+                    ${postData.userid.username}
                 </span>
 
                 <span class="text-[#71767b] text-[14px]">
-                    @beniwal
+                    @${postData.userid.username}
                 </span>
 
                 <span class="text-[#71767b]  text-[14px]">
