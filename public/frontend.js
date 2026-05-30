@@ -11,6 +11,13 @@ const textarea = document.getElementById("comment")
 
 
 
+
+const LOGOUT = document.getElementById("LOGOUT")
+
+LOGOUT.addEventListener("click",()=>{
+    window.location.href = "/login.html"
+})
+
 // fixed inset-0 z-50 bg-black/50 backdrop-blur-[2px] 
 
 const mobilePostBtn =
@@ -30,6 +37,9 @@ mobilePostBtn.addEventListener("click",()=>{
     mobilePostPage.classList.add("flex")
 
 })
+
+
+
 
 
 closeMobilePost.addEventListener("click",()=>{
