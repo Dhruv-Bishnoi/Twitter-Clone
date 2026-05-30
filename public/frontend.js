@@ -12,11 +12,17 @@ const textarea = document.getElementById("comment")
 
 
 
-const LOGOUT = document.getElementById("LOGOUT")
+const LOGOUT = document.querySelectorAll("LOGOUT")
 
-LOGOUT.addEventListener("click",()=>{
-    window.location.href = "/login.html"
+LOGOUT.forEach((LOG)=>{
+    LOG.addEventListener("click",()=>{
+        window.location.href="/login.html"
+    })
 })
+
+
+
+
 
 // fixed inset-0 z-50 bg-black/50 backdrop-blur-[2px] 
 
@@ -996,7 +1002,9 @@ async function profilePost() {
 
 
 
-const profilebtn = document.querySelector(".profileBtn")
+
+const profilebtn = document.querySelectorAll(".profileBtn")
+
 
 async function loadPosts() {
     
@@ -1009,25 +1017,32 @@ async function loadPosts() {
         createPost(post)
         
     })
-    
-profilebtn.addEventListener("click", async()=>{
-    
-        loadProfile(currentUser._id)
-    
-        await profilePost()
-
-        const backtopp = document.getElementById("profileback")
-backtopp.addEventListener("click",()=>{
-    window.location.href ="/index.html"
-})
-
-    
-    })
-
-
 }
+    
 
+    
+const profileBtns = document.querySelectorAll(".profileBtn");
 
+profileBtns.forEach((btn) => {
+
+    btn.addEventListener("click", async () => {
+
+        loadProfile(currentUser._id);
+
+        await profilePost();
+
+        const backtopp =
+        document.getElementById("profileback");
+
+        backtopp.addEventListener("click", () => {
+
+            window.location.href = "./index.html";
+
+        });
+
+    });
+
+});
 
 document.addEventListener("click", (e) => {
 
